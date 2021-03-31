@@ -11,4 +11,7 @@ return [
 
     //  端口
     'port'          =>  env('CEC_PORT', 9251),
+
+    //  token
+    'token'         =>  env('CEC_TOKEN', null),
 ];

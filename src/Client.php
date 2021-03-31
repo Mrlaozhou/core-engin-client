@@ -24,7 +24,9 @@ class Client
     public function __construct(string $websocketUrl, int $port, array $headers = null, array $subProtocols= [])
     {
         $websocketAddress          =   "ws://{$websocketUrl}:{$port}";
-        $headers            =   array_merge( ['_key' => config('coreengine-client.key')], $headers ?: [] );
+        $headers            =   array_merge(
+            ['_key' => config('coreengine-client.key'), '_token' => config('coreengine-client.token')]
+            , $headers ?: [] );
         $this->_connect = connect($websocketAddress, $subProtocols, $headers);
     }
 
