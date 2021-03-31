@@ -1,0 +1,29 @@
+{
+    "name": "mrlaozhou/core-engine-client",
+    "keywords": ["core-engine", "client", "mrlaozhou"],
+    "description": "core-engine客户端",
+    "authors": [
+        {
+            "name": "Luke",
+            "email": "zgsself@163.com"
+        }
+    ],
+    "require": {
+        "ratchet/pawl": "^0.3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mrlaozhou\\CoreEngine\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mrlaozhou\\CoreEngine\\LaravelServiceProvider"
+            ],
+            "aliases": {
+                "CoreEngineClient": "Mrlaozhou\\CoreEngine\\Facades\\Client"
+            }
+        }
+    }
+}
